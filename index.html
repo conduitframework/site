@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|ABeeZee" rel="stylesheet">
+    <style>
+      :root {
+        --light-blue: #375D81;
+        --dark-blue: #183152;
+        --light-grey: #bbbbbb;
+
+        --title-font: 'Roboto', 'sans-serif';
+        --body-font: 'ABeeZee', 'sans-serif';
+
+        --full: span 6;
+        --half: span 3;
+        --third: 1 / span 2;
+      }
+
+      body {
+        background: url('img/crossword.png') repeat;
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        background: url('img/crossword.png') repeat;
+      }
+
+      .header {
+        grid-column: var(--full);
+        font-family: var(--title-font);
+      }
+
+      .header,
+      .code,
+      .community {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header .logo {
+        width: 20%;
+      }
+
+      .header .title {
+        color: var(--dark-blue);
+      }
+
+      .header .passive {
+        color: var(--light-grey);
+        font-weight: 100;
+      }
+
+      .header .tagline {
+        color: var(--light-blue);
+      }
+
+      .call-to-action {
+        grid-column: var(--full);
+      }
+
+      .code,
+      .community {
+        grid-column: var(--half);
+        font-family: var(--body-font);
+        background: var(--dark-blue);
+        color: white;
+        border: 20px var(--dark-blue);
+      }
+
+      .code a, .code a:visited,
+      .community a:any-link {
+        color: white;
+      }
+
+      .code .title,
+      .community .title {
+        font-family: var(--title-font);
+        border: 10px var(--dark-blue);
+      }
+
+      .links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .links .link {
+        padding: 0 10px;
+      }
+
+      .footer {
+        grid-column: 1 / span 6;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <img class="logo" src="img/logo.png" alt="Conduit Logo">
+        <h1 class="title">Conduit <span class="passive">Framework</span></h1>
+        <h2 class="tagline">reliable ▹ flexible ▹ scalable</h2>
+      </header>
+      <aside class="call-to-action">
+
+      </aside>
+      <aside class="code">
+        <h3 class="title">Code</h3>
+        <ul class="links">
+          <li class="link">
+            <a href="https://hexdocs.com/conduit">HexDocs</a>
+          </li>
+          <li class="link">
+            <a href="https://hex.pm/packages?search=conduit">Hex</a>
+          </li>
+          <li class="link">
+            <a href="https://github.com/conduitframework">GitHub</a>
+          </li>
+        </ul>
+      </aside>
+      <aside class="community">
+          <h3 class="title">Community</h3>
+          <ul class="links">
+            <li class="link">
+              <a href="https://elixir-slackin.herokuapp.com/">Slack (#conduit)</a>
+            </li>
+            <li class="link">
+              <a href="https://elixirforum.com/search?q=conduit%20order%3Alatest">Elixir Forum</a>
+            </li>
+          </ul>
+      </aside>
+      <footer class="footer">
+
+      </footer>
+    </main>
+  </body>
+</html>
