@@ -56,24 +56,25 @@
 
       .header .tagline {
         color: var(--light-blue);
+        margin: 0 25%;
+        text-align: center;
       }
 
       .call-to-action {
         grid-column: var(--full);
+
       }
 
       .code,
       .community {
         grid-column: var(--half);
         font-family: var(--body-font);
-        background: var(--dark-blue);
-        color: white;
-        border: 20px var(--dark-blue);
+        color: var(--dark-blue);
       }
 
       .code a, .code a:visited,
       .community a:any-link {
-        color: white;
+        color: var(--dark-blue);
       }
 
       .code .title,
@@ -89,7 +90,16 @@
         padding: 0;
       }
 
+      .links .logo {
+        height: 1.8em;
+        margin: 0.1em;
+      }
+
       .links .link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 0 10px;
       }
 
@@ -103,21 +113,26 @@
       <header class="header">
         <img class="logo" src="img/logo.png" alt="Conduit Logo">
         <h1 class="title">Conduit <span class="passive">Framework</span></h1>
-        <h2 class="tagline">reliable ▹ flexible ▹ scalable</h2>
+        <h2 class="tagline">
+          A framework for building reliable, event-based systems, with a strong emphasis on scalability and composibility.
+        </h2>
       </header>
-      <aside class="call-to-action">
+      <!-- <aside class="call-to-action">
 
-      </aside>
+      </aside> -->
       <aside class="code">
         <h3 class="title">Code</h3>
         <ul class="links">
           <li class="link">
-            <a href="https://hexdocs.com/conduit">HexDocs</a>
+            <img class="logo" src="img/hex.png" alt="hexdocs">
+            <a href="https://hexdocs.pm/conduit">HexDocs</a>
           </li>
           <li class="link">
+            <img class="logo" src="img/hex.png" alt="hex">
             <a href="https://hex.pm/packages?search=conduit">Hex</a>
           </li>
           <li class="link">
+            <img class="logo" src="img/github.png" alt="github">
             <a href="https://github.com/conduitframework">GitHub</a>
           </li>
         </ul>
@@ -126,9 +141,11 @@
           <h3 class="title">Community</h3>
           <ul class="links">
             <li class="link">
-              <a href="https://elixir-slackin.herokuapp.com/">Slack (#conduit)</a>
+              <img class="logo" src="img/slack.png" alt="slack">
+              <a href="https://elixir-slackin.herokuapp.com/">#conduit</a>
             </li>
             <li class="link">
+              <img class="logo" src="img/elixir-forum.png" alt="elixir forum">
               <a href="https://elixirforum.com/search?q=conduit%20order%3Alatest">Elixir Forum</a>
             </li>
           </ul>
